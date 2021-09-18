@@ -1,0 +1,413 @@
+$primary-font: "IBM Plex Sans", sans-serif;
+.dropdown-toggle::after {
+    content: none;
+}
+
+.dropdown-menu{
+    margin-right: 60px;
+}
+.user {
+  img {
+    width: 48px;
+    height: 48px;
+  }
+  p {
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    /* identical to box height */
+    margin-top: 12px;
+
+    color: #000000;
+  }
+}
+.navbar {
+  height: 72px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+
+  .logoImage {
+    position: relative;
+    width: 162.57px;
+    height: 24px;
+    left: 72px;
+  }
+  .searchArea {
+    display: flex;
+    justify-content: center;
+    .search-field {
+      width: 360px;
+      height: 42px;
+      border-radius: 21px;
+      background-color: #f2f2f2;
+      justify-content: center;
+      img {
+        width: 16px;
+      }
+      input {
+        border: none;
+        background: transparent;
+        font-weight: 500;
+        font-size: 14px;
+        color: #5c5c5c;
+
+        font-family: $primary-font;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+  .buttonArea {
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+    .btn {
+      background: transparent;
+      font-family: $primary-font;
+      color: #2e2e2e;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 21px;
+      /* identical to box height */
+      outline: none;
+      text-align: right;
+      span {
+        color: blue;
+      }
+      &:focus {
+        outline: none !important;
+      }
+    }
+  }
+}
+
+.banner {
+  height: 440px;
+
+  background: url(../images/md-banner-image.png);
+  height: 440px;
+  width: 100%;
+  &::before {
+    height: 440px;
+    width: 100%;
+    content: "";
+    position: absolute;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.45) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+  }
+
+  .content {
+    position: relative;
+    padding-top: 286px;
+    margin-left: 200px;
+    width: 378px;
+    color: #ffffff;
+    font-family: $primary-font;
+    .title {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 47px;
+    }
+    .subtitle {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 23px;
+    }
+  }
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+
+  .control-bar {
+    height: 88px;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    .nav-list-area {
+      margin-top: 47px;
+      height: 50%;
+
+      .list {
+        height: 100%;
+        list-style-type: none;
+        align-items: flex-start;
+        font-family: $primary-font;
+
+        li {
+          justify-content: center;
+          padding-left: 10px;
+          a {
+            text-decoration: none;
+            color: #8a8a8a;
+            font-weight: 400;
+            &:hover {
+              color: black;
+            }
+          }
+          .active {
+            color: black;
+
+            border-bottom-color: black;
+          }
+        }
+      }
+    }
+    .nav-btns {
+      height: 100%;
+      padding-top: 40px;
+      display: flex;
+      .write-post-btn {
+        width: 133px;
+        height: 36px;
+        background: #edeef0;
+        border-radius: 4px;
+        border-color: transparent;
+        color: black;
+        font-family: $primary-font;
+        font-weight: 500;
+      }
+      .joint-grp-btn {
+        width: 125px;
+        height: 36px;
+        background: #2f6ce5;
+        border-radius: 4px;
+        color: rgb(255, 255, 255);
+        font-family: $primary-font;
+        font-weight: 500;
+        border-color: transparent;
+        margin-left: 16px;
+        img {
+          width: 22px;
+        }
+      }
+    }
+  }
+  .right-container {
+    height: 500px;
+    width: 100%;
+  }
+  .feed-area {
+    height: 500px;
+    width: 100%;
+    padding-bottom: 50px;
+    .card {
+      margin-top: 20px;
+      border-radius: 4px 4px 0px 0px;
+      font-family: $primary-font;
+      .category-txt {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 23px;
+
+        color: #000000;
+      }
+      .title-area {
+        .title {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 22px;
+          line-height: 134.17%;
+
+          color: #000000;
+        }
+        .dropdown{
+            display: flex;
+            
+            .card-btn {
+                margin-left:auto;
+                background-color: transparent;
+                border-color: transparent;
+                
+              }
+        }
+        
+      }
+      .subtitle {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 19px;
+        line-height: 134.17%;
+
+        color: #5c5c5c;
+      }
+      .sub-area {
+        .params {
+          font-family: $primary-font;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 19px;
+          color: #000000;
+        }
+        button {
+          font-family: IBM Plex Sans;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 13px;
+          
+          text-align: center;
+          height: 40px;
+
+          color: #e56135;
+          background: #ffffff;
+          border: 0.7px solid #ced3dd;
+          box-sizing: border-box;
+          border-radius: 8px;
+        }
+      }
+      .bottom-area {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        .bottom-opt {
+          display: flex;
+          padding: 0;
+
+          .views {
+            padding: 0;
+            display: flex;
+
+            align-items: center;
+
+            p {
+              font-family: $primary-font;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              margin-top: auto;
+              text-align: right;
+              color: #525252;
+              margin-left: auto;
+            }
+          }
+          .share {
+            display: flex;
+            align-items: center;
+            padding: 0;
+            .share-btn {
+              margin-left: auto;
+              width: 42px;
+              height: 36px;
+              background: #edeef0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .mb-control-bar {
+    display: none;
+  }
+}
+// for mobiles-----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (max-width: 768px) {
+  // navbar
+  .navbar {
+    display: none;
+  }
+
+  //banner
+  .banner {
+    height: 236px;
+
+    background: url(../images/sm-banner-image.png);
+    height: 236px;
+    width: 100%;
+    &::before {
+      height: 236px;
+      width: 100%;
+      content: "";
+      position: absolute;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.45) 0%,
+        rgba(0, 0, 0, 0.6) 100%
+      );
+    }
+    .content {
+      position: relative;
+      padding-top: 164px;
+      margin-left: 16px;
+      width: 230px;
+      color: #ffffff;
+      font-family: $primary-font;
+      .title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 22px;
+        height: 20px;
+      }
+      .subtitle {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .control-bar {
+    display: none;
+  }
+  .mb-control-bar {
+    display: flex;
+    height: 66px;
+    width: 100%;
+    align-items: center;
+    padding: 0;
+    .posts {
+      .posts-txt {
+        margin-left: 16px;
+        font-family: $primary-font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.01em;
+
+        color: #212529;
+      }
+    }
+    .btn-filter-area {
+      padding: 0;
+      display: flex;
+      .filter-btn {
+        margin-left: auto;
+        width: 106px;
+        height: 32px;
+        left: 236px;
+        top: 274px;
+
+        background: #f1f3f5;
+        border-radius: 4px;
+        font-family: $primary-font;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 17px;
+        border-color: transparent;
+        /* identical to box height */
+
+        color: #212529;
+      }
+    }
+  }
+}
