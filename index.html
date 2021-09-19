@@ -43,15 +43,24 @@
         </form>
       </div>
       <div class="buttonArea col-md-4">
-        <button class="btn dropdown-toggle">
+        <button  data-target="#signup-modal" data-toggle="modal"  class="btn btn-crt dropdown-toggle " id="crte-acnt-btn">
           Create account. <span> It’s free!</span>
         </button>
+        <div style="display:none" class=' row' id="user-btn">
+          <img class=" col-3 " src="./images/c4-usr-img.svg" alt="">
+          <button class="btn col-9 dropdown-toggle" >
+             Siddharth Goyal
+            </div>
+          </button>
+        </div>
+        
       </div>
     </nav>
 
     <!---NAVBAR END------------------------------------------------------------------------------->
 
     <!--BANNER START------------------------------------------------------------------------------->
+
     <div class="banner">
       <div class="content">
         <p class="title">
@@ -61,8 +70,9 @@
         </p>
       </div>
     </div>
-  </body>
-  <!---BANNER END------------------------------------------------------------------------------->
+  
+    
+      <!---BANNER END------------------------------------------------------------------------------->
 
   <!---FEED AREA START------------------------------------------------------------------------------->
   <div class="col-12 mb-control-bar row">
@@ -115,7 +125,7 @@
               </p>
               <div class="dropdown  col-2">
                 <button class="btn btn-secondary dropdown-toggle card-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="./images/c-btn-img.png" alt="" />
+                    <img src="./images/c-btn-img.svg" alt="" />
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item" href="#">Edit</a>
@@ -137,7 +147,7 @@
                   <div class="img-field" class="col-3">
                     <img src="./images/c1-usr-img.png" alt="" />
                   </div>
-                  <p class="col-9">Sarthak Kamra</p>
+                  <p class="col-9">Sarthak Kamra <br></p>
                 </div>
               </div>
               <!---//user-->
@@ -148,7 +158,7 @@
                 </div>
                 <div class="share col-3"">
                     <button class="btn  share-btn" >
-                    <img src="./images/share-img.png" alt="">
+                    <img src="./images/share-img.svg" alt="">
                     </button></div>
                     
                
@@ -173,7 +183,7 @@
                 </p>
                 <div class="dropdown  col-2">
                     <button class="btn btn-secondary dropdown-toggle card-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="./images/c-btn-img.png" alt="" />
+                        <img src="./images/c-btn-img.svg" alt="" />
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
@@ -193,7 +203,7 @@
                     <div class="img-field" class="col-3">
                       <img src="./images/c2-usr-img.png" alt="" />
                     </div>
-                    <p class="col-9">Sarah West</p>
+                    <p class="col-9">Sarah West <br></p>
                   </div>
                 </div>
                 <!---//user-->
@@ -204,7 +214,7 @@
                   </div>
                   <div class="share col-3"">
                       <button class="btn  share-btn" >
-                      <img src="./images/share-img.png" alt="">
+                      <img src="./images/share-img.svg" alt="">
                       </button></div>
                       
                  
@@ -228,7 +238,7 @@
                 </p>
                 <div class="dropdown  col-2">
                     <button class="btn btn-secondary dropdown-toggle card-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="./images/c-btn-img.png" alt="" />
+                        <img src="./images/c-btn-img.svg" alt="" />
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
@@ -252,7 +262,7 @@
                     <div class="img-field" class="col-3">
                       <img src="./images/c3-usr-img.png" alt="" />
                     </div>
-                    <p class="col-9">Ronal Jones</p>
+                    <p class="col-9">Ronal Jones <br></p>
                   </div>
                 </div>
                 <!---//user-->
@@ -263,7 +273,7 @@
                   </div>
                   <div class="share col-3"">
                       <button class="btn  share-btn" >
-                      <img src="./images/share-img.png" alt="">
+                      <img src="./images/share-img.svg" alt="">
                       </button></div>
                       
                  
@@ -283,7 +293,7 @@
                 </p>
                 <div class="dropdown  col-2">
                     <button class="btn btn-secondary dropdown-toggle card-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="./images/c-btn-img.png" alt="" />
+                        <img src="./images/c-btn-img.svg" alt="" />
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
@@ -305,9 +315,9 @@
                 <div class="user-profile-filed col-6">
                   <div class="user row">
                     <div class="img-field" class="col-3">
-                      <img src="./images/c4-usr-img.png" alt="" />
+                      <img src="./images/c4-usr-img.svg" alt="" />
                     </div>
-                    <p class="col-9">Joseph Gray</p>
+                    <p class="col-9">Joseph Gray <br></p>
                   </div>
                 </div>
                 <!---//user-->
@@ -318,7 +328,7 @@
                   </div>
                   <div class="share col-3"">
                       <button class="btn  share-btn" >
-                      <img src="./images/share-img.png" alt="">
+                      <img src="./images/share-img.svg" alt="">
                       </button></div>
                       
                  
@@ -327,14 +337,182 @@
             </div>
           </div>
       </div>
-      <div class="col-md-4 right-container"></div>
+       <!---FEED AREA END------------------------------------------------------------------------------->
+      
+       <!-- RIGHT CONTAINER------------ -->
+      <div class="col-md-4 right-container">
+        <div class="location-form row">
+
+          <div class=" col-12">
+            <form class="form-inline  row loc-form">
+              <img src="./images/location-img.png" alt="search col-md-2" />
+              <input
+                class="col-md-8"
+                type="location"
+                value="Noida, India"
+              
+              />
+              <img class='col-2 pen-png' src="./images/pencil.svg" alt="">
+            </form>
+           </div>
+
+            <div class="notif col-12 row">
+           <span class="col-2"><img src="./images/notif.svg" alt=""></span>
+               <p class="loc-notif col-10">
+   Your location will help us serve better and extend a personalised experience.
+             </p>
+            </div>
+           </div>
+           <div class="followers-field">
+            <p class="followers-title"><img src="./images/like.svg" alt=""> RECOMMENDED GROUPS</p>
+            <div class="followers-list-container">
+              <ul class="followers-list">
+                <li> <img src="./images/follwer-1.svg" alt=""> <p>Leisure </p>  <button >follow</button></li>
+                <li><img src="./images/follwer-2.svg" alt=""> <p>Activism </p>  <button >follow</button></li>
+                <li><img src="./images/follwer-3.svg" alt=""> <p>MBA </p>  <button >follow</button></li>
+                <li><img src="./images/follwer-4.jpg" alt=""> <p>Philosophy </p>  <button >follow</button></li>
+            <li><a  href="" class="mr-5"> see more ..</a></li>
+              </ul>
+            </div>
+           </div>
+         </div>
     
     </div>
-    
+     <!--fixed bubble-->
+  
+  </div>
+  <div class="pencil">
+    <button data-toggle="modal" data-target="#signup-sm" class='btn-pencil'><img class='icon-pencil' src="./images/bubble.svg" alt=""></button>
   </div>
  
-  <!---FEED AREA END------------------------------------------------------------------------------->
+
+  <!---MODALS   -------------------------------------------------------------->
+<!---SM MODALS-->
+<div class="modal fade bd-example-modal-sm signup-modal" id='signup-sm' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="row">
+        <div class="form-field col-12">
+            <form class=' row pl-5 pr-5 pb-2 pt-3' action="">
+              <p class='col-12'>Create Account</p>
+                  <input type="text" class="form-control col-6" placeholder="First Name">
+                  <input type="text" class="form-control col-6"  placeholder="Last Name">
+                  <input type="email" class="form-control col-12"  placeholder="Email">
+                  <input type="password" class="form-control col-12"  placeholder="Password">
+                  <input type="password" class="form-control col-12"  placeholder="Confirm Password">
+                  <button type="button"  class="btn btn-primary form-control col-6"  data-toggle="modal" onclick="changeUser()">Create Account</button>
+                  <a href=""  data-toggle="modal" data-target="#signin-sm" onclick="signinSm()"  class="col-6">or, Sign In</a>
+                 </form>
+                 <div class="row other-btns pl-5 pb-2 pt-2 pr-5">
+                   <button class="btn fb col-12 row"><img src="./images/fb.svg" alt="">Sign up with Facebook</button>
+                   <button class="btn  google col-12 row"><img src="./images/google.svg" alt="">Sign up with Google</button>
+                <p class="terms">By signing up, you agree to our Terms & conditions, Privacy policy</p>
+                  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!------SM SIGN IN------>
+<div class="modal fade bd-example-modal-sm signup-modal " id='signin-sm' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="row">
+        <div class="form-field col-12">
+            <form class=' row pl-5 pr-5 pb-2 pt-3' action="">
+              <p class='col-12'>Welcome back!</p>
+                  <input type="email" class="form-control col-12"  placeholder="Email">
+                  <input type="password" class="form-control col-12"  placeholder="Password">
+                  <button type="button"  class="btn btn-primary form-control col-6"  data-toggle="modal" onclick="changeUser()">Sign In</button>
+                  <a href="" class="col-6" data-toggle='modal' onclick="signupSm()">or, Create Account</a>
+                 </form>
+                 <div class="row other-btns pl-5 pb-2 pt-2 pr-5">
+                   <button class="btn fb col-12 row"><img src="./images/fb.svg" alt="">Sign up with Facebook</button>
+                   <button class="btn  google col-12 row"><img src="./images/google.svg" alt="">Sign up with Google</button>
+                <p class="terms">Forgot Password?</p>
+                  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!------------------------------------->
+  <!----SIGNUP MODAL-->
+  <div class="modal fade bd-example-modal-lg signup-modal" id='signup-sm' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="alert alert-success" role="alert">
+          Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼
+        </div>
+        <div class="row">
+          <div class="form-field col-6">
+              <form class='pl-5 row' action="">
+                <p class='col-12'>Create Account</p>
+                    <input type="text" class="form-control col-6" placeholder="First Name">
+                    <input type="text" class="form-control col-6"  placeholder="Last Name">
+                    <input type="email" class="form-control col-12"  placeholder="Email">
+                    <input type="password" class="form-control col-12" placeholder="Password">
+                    <input type="password" class="form-control col-12" placeholder="Confirm Password">
+                    <button type="button"  class="btn btn-primary form-control col-12"  data-toggle="modal" onclick="changeUser()">Create Account</button>
+
+                   </form>
+                   <div class="row  pl-5 other-btns">
+                     <button class="btn fb col-12 row"><img src="./images/fb.svg" alt="">Sign up with Facebook</button>
+                     <button class="btn  google col-12 row"><img src="./images/google.svg" alt="">Sign up with Google</button>
+                   </div>
+          </div>
+          <div class="col-6 poster  row">
+                        <p class="text col-12  ">Already have an account? <a href="" class="btn-close"data-toggle="modal" onclick="signin()">Sign In</a> </p>
+             <div class="image p-4">
+                  <img src="./images/illustration.svg" alt="">
+              </div>
+              <p class="text2 col-12">By signing up, you agree to our Terms & conditions, Privacy policy</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
  
+
+
+  <!----SIGNIN MODAL-->
+  <div class="modal fade bd-example-modal-lg login-modal"  id="login-modal"  tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="alert alert-success" role="alert">
+          Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼
+        </div>
+        <div class="row">
+          <div class="form-field col-6">
+              <form class='pl-5 row' action="">
+                <p class='col-12'>Sign In</p>
+                    <input type="email" class="form-control col-12"  placeholder="Email">
+                    <input type="password" class="form-control col-12"  placeholder="Password">
+                    <button type="button" data-toggle="modal" onclick="changeUser()" class="btn btn-primary form-control col-12">Sign In</button>
+
+                   </form>
+                   <div class="row  pl-5 other-btns">
+                     <button class="btn fb col-12 row"><img src="./images/fb.svg" alt="">Sign up with Facebook</button>
+                     <button class="btn  google col-12 row"><img src="./images/google.svg" alt="">Sign up with Google</button>
+                   </div>
+                   <div class="pl-5"><p class="col-12 forget-p">Forgot Password?</p></div>
+                   
+          </div>
+          <div class="col-6 poster  row">
+                        <p class="text col-12  ">Don’t have an account yet?  <a href="" data-toggle="modal" onclick="signup()">Create new for free!</a> </p>
+             <div class="image p-4">
+                  <img src="./images/illustration.svg" alt="">
+              </div>
+             
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+
+
   <!--- Javascript libraries-->
   <script
     src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -351,4 +529,38 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"
   ></script>
+
+  <script>
+   
+     function changeUser(){
+    document.getElementById('crte-acnt-btn').style.display = 'none';
+    document.getElementById('user-btn').style.display = 'flex';
+    $('#signup-modal').modal('hide');
+    $('#login-modal').modal('hide');
+
+     }
+    async function signin(){
+      
+      $('.signup-modal').modal('hide');
+      $('.login-modal').modal('show');
+ 
+      
+    }
+    async function signup(){
+      
+      $('.signup-modal').modal('show');
+      $('.login-modal').modal('hide');
+ 
+      
+    }
+
+    async function signinSm(){
+      
+      $('#signup-sm').modal('hide');
+      $('#login-sm').modal('show');
+ 
+    
+    }
+    
+     </script>
 </html>

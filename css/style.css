@@ -1,5 +1,11 @@
-.dropdown-toggle::after {
-  content: none;
+.pencil {
+  display: none;
+}
+
+.btn:focus {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 .dropdown-menu {
@@ -7,24 +13,28 @@
 }
 
 .user img {
-  width: 48px;
-  height: 48px;
+  width: 2.5em;
+  height: 2.5em;
+  position: absolute;
+  display: block;
 }
 
 .user p {
   font-family: "IBM Plex Sans", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
-  line-height: 23px;
+  font-size: 0.8rem;
+  margin-left: 28px;
   /* identical to box height */
   margin-top: 12px;
   color: #000000;
 }
 
 .navbar {
+  position: fixed;
+  z-index: 22;
   height: 72px;
-  width: 100%;
+  width: 101vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,6 +45,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0 !important;
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .navbar .logoImage {
@@ -90,7 +102,30 @@
           justify-content: center;
 }
 
-.navbar .buttonArea .btn {
+.navbar .buttonArea #user-btn {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 5px;
+  background: transparent;
+  height: 72px;
+}
+
+.navbar .buttonArea #user-btn img {
+  padding: 0;
+  width: 36px;
+}
+
+.navbar .buttonArea #user-btn button {
+  background-color: transparent;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.navbar .buttonArea .btn-crt {
   background: transparent;
   font-family: "IBM Plex Sans", sans-serif;
   color: #2e2e2e;
@@ -103,11 +138,11 @@
   text-align: right;
 }
 
-.navbar .buttonArea .btn span {
+.navbar .buttonArea .btn-crt span {
   color: blue;
 }
 
-.navbar .buttonArea .btn:focus {
+.navbar .buttonArea .btn-crt:focus {
   outline: none !important;
 }
 
@@ -232,11 +267,6 @@
   width: 22px;
 }
 
-.container .right-container {
-  height: 500px;
-  width: 100%;
-}
-
 .container .feed-area {
   height: 500px;
   width: 100%;
@@ -245,6 +275,7 @@
 
 .container .feed-area .card {
   margin-top: 20px;
+  margin-bottom: 20px;
   border-radius: 4px 4px 0px 0px;
   font-family: "IBM Plex Sans", sans-serif;
 }
@@ -271,6 +302,10 @@
   display: flex;
 }
 
+.container .feed-area .card .title-area .dropdown .dropdown-toggle::after {
+  content: none;
+}
+
 .container .feed-area .card .title-area .dropdown .card-btn {
   margin-left: auto;
   background-color: transparent;
@@ -294,6 +329,12 @@
   color: #000000;
 }
 
+.container .feed-area .card .sub-area .params .param1 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .container .feed-area .card .sub-area button {
   font-family: IBM Plex Sans;
   font-style: normal;
@@ -311,18 +352,10 @@
 
 .container .feed-area .card .bottom-area {
   padding-left: 20px;
-  padding-right: 20px;
   padding-top: 20px;
 }
 
-.container .feed-area .card .bottom-area .bottom-opt {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0;
-}
-
-.container .feed-area .card .bottom-area .bottom-opt .views {
+.container .feed-area .card .bottom-area .views {
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -332,7 +365,7 @@
           align-items: center;
 }
 
-.container .feed-area .card .bottom-area .bottom-opt .views p {
+.container .feed-area .card .bottom-area .views p {
   font-family: "IBM Plex Sans", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -343,7 +376,7 @@
   margin-left: auto;
 }
 
-.container .feed-area .card .bottom-area .bottom-opt .share {
+.container .feed-area .card .bottom-area .share {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -353,22 +386,376 @@
   padding: 0;
 }
 
-.container .feed-area .card .bottom-area .bottom-opt .share .share-btn {
+.container .feed-area .card .bottom-area .share .share-btn {
   margin-left: auto;
   width: 42px;
   height: 36px;
   background: #edeef0;
 }
 
-@media only screen and (min-width: 768px) {
+.container .right-container {
+  padding-left: 90px;
+  width: 100%;
+}
+
+.container .right-container .location-form {
+  padding-top: 50px;
+}
+
+.container .right-container .location-form .loc-form {
+  border-bottom: 0.4px solid #b8b8b8;
+  padding-bottom: 5px;
+}
+
+.container .right-container .location-form .loc-form input {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  border: transparent;
+}
+
+.container .right-container .location-form .loc-form input:focus {
+  outline: none !important;
+}
+
+.container .right-container .location-form .loc-form .pen-png {
+  margin-left: auto;
+  width: 8px;
+}
+
+.container .right-container .location-form .notif {
+  padding-top: 30px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.container .right-container .location-form .notif .col-12 {
+  padding: 0;
+}
+
+.container .right-container .location-form .notif .col-12 img {
+  color: #000000;
+  padding: 0;
+  opacity: 0.5;
+  margin-right: 5px;
+}
+
+.container .right-container .location-form .notif p {
+  padding: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1vw;
+  color: #000000;
+  opacity: 0.5;
+}
+
+.container .right-container .followers-field {
+  padding-top: 50px;
+  width: 100%;
+  height: 100px;
+}
+
+.container .right-container .followers-field .followers-title {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.container .right-container .followers-field .followers-title img {
+  margin-bottom: 3px;
+}
+
+.container .right-container .followers-field .followers-list-container {
+  padding-top: 20px;
+  width: 90%;
+}
+
+.container .right-container .followers-field .followers-list-container ul {
+  width: inherit;
+  list-style: none;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 20px;
+}
+
+.container .right-container .followers-field .followers-list-container ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 40px;
+}
+
+.container .right-container .followers-field .followers-list-container ul li img {
+  width: 3vw;
+}
+
+.container .right-container .followers-field .followers-list-container ul li p {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1vw;
+  margin: auto;
+  color: #000000;
+  padding: 0;
+  max-width: 19px;
+  margin-left: 10px;
+}
+
+.container .right-container .followers-field .followers-list-container ul li button {
+  background: #edeef0;
+  border-radius: 14px;
+  border: transparent;
+  margin-left: auto;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1vw;
+  margin: auto;
+  color: #000000;
+  margin-left: 50px;
+}
+
+.container .right-container .followers-field .followers-list-container ul li button:focus {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.container .right-container .followers-field .followers-list-container ul li a {
+  margin-left: auto;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1vw;
+  padding: 0;
+}
+
+.signup-modal {
+  border-radius: 50px;
+}
+
+.signup-modal .modal-content .alert {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.signup-modal .modal-content .form-field {
+  width: 100%;
+}
+
+.signup-modal .modal-content .form-field form p {
+  margin-top: 24px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 31px;
+  color: #000000;
+}
+
+.signup-modal .modal-content .form-field form input {
+  border-radius: 2px 2px 0px 0px;
+  border: 1px solid #d9d9db;
+  background: #f7f8fa;
+  height: 46px;
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 16px;
+  color: #8a8a8a;
+}
+
+.signup-modal .modal-content .form-field form input:focus {
+  outline: none !important;
+}
+
+.signup-modal .modal-content .form-field form button {
+  margin-top: 20px;
+  border-radius: 20px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
+  height: 40px;
+}
+
+.signup-modal .modal-content .form-field .other-btns {
+  margin-top: 17px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.signup-modal .modal-content .form-field .other-btns button {
+  padding: 0px;
+  margin-top: 8px;
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  background: #ffffff;
+  border: 0.6px solid #d9d9db;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 2px;
+  height: 38px;
+}
+
+.signup-modal .modal-content .form-field .other-btns button img {
+  width: 16px;
+  padding-right: 3px;
+}
+
+.signup-modal .modal-content .form-field .forget-p {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: -0.008em;
+  color: #000000;
+}
+
+.signup-modal .modal-content .poster {
+  width: 100%;
+  padding: 0;
+}
+
+.signup-modal .modal-content .poster .image {
+  padding: 0;
+}
+
+.signup-modal .modal-content .poster .text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1vw;
+  line-height: 17px;
+  text-align: right;
+  color: #3d3d3d;
+}
+
+.signup-modal .modal-content .poster .text2 {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 16px;
+  text-align: right;
+  letter-spacing: -0.008em;
+  color: #000000;
+  opacity: 0.6;
+}
+
+@media only screen and (min-width: 800px) {
   .mb-control-bar {
     display: none;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
+  .pencil {
+    display: block;
+    position: fixed;
+    z-index: 22;
+    width: 54px;
+    height: 54px;
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+  }
+  .pencil button {
+    background: transparent;
+    border: none;
+  }
+  .pencil button:focus {
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+  }
+  .modal .modal-sm {
+    margin: 60% auto;
+  }
+  .modal .modal-sm .modal-content .form-field {
+    width: 100%;
+  }
+  .modal .modal-sm .modal-content .form-field form p {
+    margin-top: 1px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    color: #000000;
+  }
+  .modal .modal-sm .modal-content .form-field form button {
+    margin-top: 20px;
+    border-radius: 20px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #ffffff;
+    height: 40px;
+    width: 150px;
+  }
+  .modal .modal-sm .modal-content .form-field form a {
+    margin-top: 25px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 17px;
+    text-align: end;
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+    color: #495057;
+  }
+  .modal .modal-sm .modal-content .form-field .other-btns {
+    margin-top: 2px;
+    margin-bottom: 10px;
+  }
+  .modal .modal-sm .modal-content .form-field .other-btns button {
+    margin-top: 5px;
+    margin-bottom: 7px;
+  }
+  .modal .modal-sm .modal-content .form-field .other-btns .terms {
+    margin-top: 10px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: -0.008em;
+    margin: auto;
+    color: #212529;
+  }
   .navbar {
     display: none;
+  }
+  .user .img-field {
+    margin-top: 10px;
   }
   .banner {
     height: 236px;
@@ -439,18 +826,40 @@
     margin-left: auto;
     width: 106px;
     height: 32px;
-    left: 236px;
-    top: 274px;
     background: #f1f3f5;
     border-radius: 4px;
     font-family: "IBM Plex Sans", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
-    line-height: 17px;
     border-color: transparent;
     /* identical to box height */
     color: #212529;
+  }
+  .container .bottom-area {
+    padding: 0;
+  }
+  .container .bottom-area .user p::after {
+    content: " 1.4k views";
+    font-family: "IBM Plex Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .container .bottom-area .views .view-txt {
+    display: none;
+  }
+  .container .bottom-area .share-btn {
+    padding: 2px;
+    margin-bottom: 5px;
+    width: 72px !important;
+  }
+  .container .bottom-area .share-btn::after {
+    content: "Share";
+  }
+  .container .right-container {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
