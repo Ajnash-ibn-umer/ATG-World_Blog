@@ -224,11 +224,27 @@ $primary-font: "IBM Plex Sans", sans-serif;
           width: 22px;
         }
       }
+      .joint-grp-btn-clicked {
+        margin-left: 16px;
+        width: 125px;
+        height: 36px;
+        background: #ffffff;
+        border: 0.8px solid #989899;
+        box-sizing: border-box;
+        border-radius: 4px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 19px;
+        color: #6a6a6b;
+        img {
+          width: 22px;
+        }
+      }
     }
   }
 
   .feed-area {
-    height: 500px;
     width: 100%;
     padding-bottom: 50px;
     .card {
@@ -239,7 +255,7 @@ $primary-font: "IBM Plex Sans", sans-serif;
       .category-txt {
         font-style: normal;
         font-weight: 500;
-        font-size: 18px;
+        font-size: 15px;
         line-height: 23px;
 
         color: #000000;
@@ -248,13 +264,14 @@ $primary-font: "IBM Plex Sans", sans-serif;
         .title {
           font-style: normal;
           font-weight: 600;
-          font-size: 22px;
+          font-size: 1.2em;
           line-height: 134.17%;
 
           color: #000000;
         }
         .dropdown {
           display: flex;
+          padding: 0;
           .dropdown-toggle::after {
             content: none;
           }
@@ -268,7 +285,7 @@ $primary-font: "IBM Plex Sans", sans-serif;
       .subtitle {
         font-style: normal;
         font-weight: normal;
-        font-size: 19px;
+        font-size: 16px;
         line-height: 134.17%;
 
         color: #5c5c5c;
@@ -285,6 +302,10 @@ $primary-font: "IBM Plex Sans", sans-serif;
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
+          }
+          img{
+            width: 16px;
+            padding: 2px;
           }
         }
         button {
@@ -336,8 +357,11 @@ $primary-font: "IBM Plex Sans", sans-serif;
 
             width: 42px;
             height: 36px;
-
             background: #edeef0;
+            img{
+              margin-bottom: 5px;
+
+            }
           }
         }
       }
@@ -398,6 +422,7 @@ $primary-font: "IBM Plex Sans", sans-serif;
       }
     }
     .followers-field {
+      display: none;
       padding-top: 50px;
       width: 100%;
       height: 100px;
@@ -471,6 +496,10 @@ $primary-font: "IBM Plex Sans", sans-serif;
         }
       }
     }
+  }
+  .footer {
+    width: 100%;
+    height: 50px;
   }
 }
 
@@ -594,14 +623,64 @@ $primary-font: "IBM Plex Sans", sans-serif;
 }
 
 //-------------------------------------------------
+@media only screen and (max-width: 980px) {
+  .notif {
+    display: none;
+  }
+}
 @media only screen and (min-width: 800px) {
   .mb-control-bar {
+    display: none;
+  }
+  .nav-sm {
     display: none;
   }
 }
 // for mobiles-----------------------------------------------------------------------------------------------------------------------------------------
 @media only screen and (max-width: 800px) {
- 
+  .nav-sm {
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    position: fixed;
+    z-index: 44;
+
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.4458158263305322) 56%,
+      rgba(0, 0, 0, 0.6587009803921569) 100%
+    );
+    button {
+      background: transparent;
+    }
+    .bck-btn {
+      border: none;
+      svg {
+        color: white;
+      }
+    }
+    .rght-btn {
+      align-items: flex-end;
+      flex-direction: row-reverse;
+      .join-grp {
+        padding: 0;
+        width: 76px;
+        height: 35px;
+        text-align: center;
+        border: 0.8px solid #ffffff;
+        box-sizing: border-box;
+        border-radius: 4px;
+        font-family: $primary-font;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        color: #ffffff;
+      }
+    }
+  }
   .pencil {
     display: block;
     position: fixed;
@@ -622,10 +701,9 @@ $primary-font: "IBM Plex Sans", sans-serif;
   }
   // MODALS
   .modal {
-   
     .modal-sm {
       margin: 60% auto;
-    
+
       .modal-content {
         .form-field {
           width: 100%;
